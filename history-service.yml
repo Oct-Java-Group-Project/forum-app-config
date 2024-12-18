@@ -59,3 +59,6 @@ logging:
     com.beaconfire: DEBUG
     org.springframework: INFO
     org.hibernate: INFO
+
+user:
+  role: Dev-Bob

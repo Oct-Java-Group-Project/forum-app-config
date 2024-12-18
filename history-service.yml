@@ -1,64 +1,9 @@
-# Application Configuration
-server:
-  port: 8083
-
-# Database Configuration
 spring:
   application:
-    name: history-service
-  datasource:
-    url: jdbc:mysql://database-1.cjwa24k2srfd.us-east-2.rds.amazonaws.com:3306/history_db?useSSL=true&serverTimezone=UTC
-    username: root
-    password: groupproject
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    hikari:
-      maximum-pool-size: 5
-      minimum-idle: 1
-      idle-timeout: 300000
-    tomcat:
-      test-while-idle: true
-      validation-query: SELECT 1
+    name: config-client
 
-  # JPA/Hibernate Configuration
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-        format_sql: true
-  
-  # Cache Configuration
-  cache:
-    type: simple
-    
-  # RabbitMQ Configuration
-  rabbitmq:
-    host: b-420b96b0-7ce2-4393-9684-0ede382d6959.mq.us-east-2.amazonaws.com
-    port: 5671
-    username: groupproject
-    password: groupproject
-    ssl:
-      enabled: true
-      algorithm: TLSv1.2
-      verify-hostname: true
-
-# Eureka Configuration
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-    enabled: true
-  instance:
-    prefer-ip-address: true
-
-# Logging Configuration
-logging:
-  level:
-    com.beaconfire: DEBUG
-    org.springframework: INFO
-    org.hibernate: INFO
+server:
+  port: 0
 
 user:
   role: Dev-Bob

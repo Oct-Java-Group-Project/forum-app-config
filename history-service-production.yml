@@ -43,6 +43,12 @@ spring:
       enabled: true
       algorithm: TLSv1.2
       verify-hostname: true
+      
+  management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,busrefresh
 
 # Eureka Configuration
 eureka:

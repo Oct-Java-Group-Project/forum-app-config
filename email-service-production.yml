@@ -1,0 +1,45 @@
+# Application Configuration
+server:
+  port: 8087
+
+# Database Configuration
+spring:
+  application:
+    name: email-service
+    
+  # RabbitMQ Configuration
+  rabbitmq:
+    host: b-420b96b0-7ce2-4393-9684-0ede382d6959.mq.us-east-2.amazonaws.com
+    port: 5671
+    username: groupproject
+    password: groupproject
+    ssl:
+      enabled: true
+      algorithm: TLSv1.2
+      verify-hostname: true
+      
+  management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,busrefresh
+
+# Eureka Configuration
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    enabled: true
+  instance:
+    prefer-ip-address: true
+
+# Logging Configuration
+logging:
+  level:
+    com.beaconfire: DEBUG
+    org.springframework: INFO
+    org.hibernate: INFO
+
+user:
+  role:
+     R

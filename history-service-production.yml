@@ -8,7 +8,7 @@ spring:
     name: history-service
   datasource:
     url: jdbc:mysql://database-1.cjwa24k2srfd.us-east-2.rds.amazonaws.com:3306/history_db?useSSL=true&serverTimezone=UTC
-    username: root
+    username: root1
     password: groupproject
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:

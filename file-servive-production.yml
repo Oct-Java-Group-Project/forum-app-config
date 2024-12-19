@@ -1,0 +1,44 @@
+# Spring application name
+spring:
+  application:
+    name: file-service
+
+# Server port
+server:
+  port: 8086
+
+# AWS S3 Configuration
+# for testing only (the credential needs to be hidden in AWS Secret Manager)
+aws:
+  s3:
+    bucket-name: us-east-2-bucket-javaoct-forum-files
+    region: us-east-2
+
+# Swagger configuration
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+# Actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  web:
+    base-path: /actuator
+
+# Eureka Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://host.docker.internal:8761/eureka
+#      prefer-ip-address: true
+    registerWithEureka: true
+    fetchRegistry: true

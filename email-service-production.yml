@@ -1,4 +1,3 @@
-# Application Configuration
 server:
   port: 8087
 
@@ -19,10 +18,10 @@ spring:
       verify-hostname: true
       
   management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh,busrefresh
+    endpoints:
+      web:
+        exposure:
+          include: refresh, busrefresh
 
 # Eureka Configuration
 eureka:
@@ -40,6 +39,15 @@ logging:
     org.springframework: INFO
     org.hibernate: INFO
 
-user:
-  role:
-     R
+# Email Configuration
+email:
+  smtp:
+    host: email-smtp.us-east-2.amazonaws.com
+    email: AKIAQMCPTSJ7JW7AATNK
+    password: BLL3JKaWwNtiEAcHcPicHX2U++kznitWYa3BVRrIRxX7
+    from:
+      address: no-reply@nico-nico-nii.com
+
+config:
+  version:
+    1
